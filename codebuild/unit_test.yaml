@@ -1,0 +1,7 @@
+version: 0.2      
+phases:
+  build:
+    commands:
+       - (make test)
+       - (cd smlogs-kubectl-plugin && make test)
+       - (bash codebuild/scripts/diff_release_yamls.sh)
